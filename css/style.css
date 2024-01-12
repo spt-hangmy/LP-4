@@ -938,7 +938,7 @@ input.wpcf7-not-valid {
     width: 502px; }
 
 .sc-whatabout {
-  padding: 103px 0 84px; }
+  padding: 103px 0 0; }
   .sc-whatabout .c-content .row {
     gap: 10px;
     padding-inline: 15px; }
@@ -986,7 +986,8 @@ input.wpcf7-not-valid {
 
 section.sc-help {
   background: #f6f6fe;
-  padding: 103px 0 85px; }
+  padding: 103px 0 85px;
+  margin-top: -3px; }
   section.sc-help .sc-help__thumb {
     margin-bottom: 32px; }
     section.sc-help .sc-help__thumb img {
@@ -1011,7 +1012,7 @@ section.sc-help {
 
 .sc-dd {
   position: relative;
-  padding: 102px 0 70px; }
+  padding: 102px 0 83px; }
   .sc-dd .c-header {
     margin-bottom: 50px; }
     .sc-dd .c-header h2 {
@@ -1021,12 +1022,15 @@ section.sc-help {
   .sc-dd .c-content .wrap-item {
     max-width: 286px;
     width: 100%; }
+    .sc-dd .c-content .wrap-item img {
+      width: 282px;
+      height: auto; }
   .sc-dd .el-item {
     max-width: 100%;
     background-color: #fff; }
   .sc-dd .el-item__meta {
     align-items: center;
-    margin-bottom: 20px; }
+    margin-bottom: 18px; }
   .sc-dd .el-item__number {
     flex: 0 0 auto;
     width: 50px;
@@ -1063,84 +1067,124 @@ section.sc-help {
 
 .sc-salesforce {
   position: relative;
-  padding: 220px 0 140px;
-  background: linear-gradient(180deg, #403ceb 0%, #4c2dc9 72.7%);
-  clip-path: url(../images/half-ellipse.svg); }
-  .sc-salesforce:before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/half-ellipse.svg);
-    background-repeat: no-repeat;
-    background-size: 105% auto;
-    z-index: -1;
-    pointer-events: none; }
-  .sc-salesforce .c-header__title {
-    font-size: 48px;
-    line-height: 70px;
-    color: #ffffff;
-    text-shadow: 2px 0 #403ceb, -2px 0 #403ceb, 0 2px #403ceb, 0 -2px #403ceb, 1px 1px #403ceb, -1px -1px #403ceb, 1px -1px #403ceb, -1px 1px #403ceb, 0px 4px 10px rgba(0, 0, 0, 0.67); }
-  .sc-salesforce .el-item {
-    padding: 16px 8px;
-    border-radius: 16px;
-    background-color: white;
-    transition: 0.5s; }
-    .sc-salesforce .el-item:hover {
-      box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.3); }
-    .sc-salesforce .el-item .ratio {
-      --bs-aspect-ratio: 57.5%; }
-  .sc-salesforce .el-item__meta {
-    padding: 16px 16px 0;
-    margin-bottom: 32px; }
-  .sc-salesforce .el-item__title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 29px;
-    color: #2f2e57;
-    margin-bottom: 12px; }
-  .sc-salesforce .el-item__excerpt {
-    font-weight: 350;
-    font-size: 14px;
-    line-height: 24px;
-    color: #2f2e57; }
-  .sc-salesforce .el-item__footer {
-    justify-content: space-evenly; }
-
-.sc-salesforce-pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1; }
-  .sc-salesforce-pattern:before {
-    content: "";
-    position: absolute;
-    top: 260px;
-    width: 33%;
-    height: 23%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-    pointer-events: none;
-    left: 0;
-    background-image: url(../images/sc-salesforce-left.svg); }
-  .sc-salesforce-pattern:after {
-    content: "";
-    position: absolute;
-    top: 260px;
-    width: 33%;
-    height: 23%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-    pointer-events: none;
-    right: 0;
-    background-image: url(../images/sc-salesforce-right.svg); }
+  background-color: #ececf6; }
+  .sc-salesforce-inner {
+    padding: 103px 0 100px; }
+    .sc-salesforce-inner .wrap-title {
+      gap: 32px;
+      justify-content: center;
+      margin-bottom: 78px; }
+      .sc-salesforce-inner .wrap-title img {
+        width: 179px;
+        height: auto; }
+      .sc-salesforce-inner .wrap-title h2 {
+        color: var(--dark, #2f2e57);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: normal; }
+        .sc-salesforce-inner .wrap-title h2 span {
+          display: block; }
+    .sc-salesforce-inner a {
+      background: #403ceb;
+      color: #fff !important;
+      padding: 8px 32px;
+      border-radius: 100px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      /* 171.429% */
+      position: relative;
+      display: inline-block;
+      width: max-content; }
+      .sc-salesforce-inner a::before {
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        transition: color 0.5s;
+        -webkit-mask-image: url(../images/icon-arrow-right.svg);
+        background-color: #fff;
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: 16px;
+        display: inline-block;
+        width: 7px;
+        height: 12px;
+        background-image: url(../images/icon-arrow-right.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        pointer-events: none; }
+    .sc-salesforce-inner .wrap-block-draw {
+      gap: 56px 24px;
+      flex-wrap: wrap;
+      margin-bottom: 48px; }
+      .sc-salesforce-inner .wrap-block-draw .block-draw {
+        width: calc((100% - 24px * 3) / 4);
+        flex-wrap: wrap;
+        padding: 32px 16px 16px 16px;
+        display: flex;
+        gap: 10px;
+        text-align: center;
+        position: relative;
+        border-radius: 16px;
+        background: #fff;
+        justify-content: center; }
+        .sc-salesforce-inner .wrap-block-draw .block-draw .tag-number {
+          color: var(--dark, #2f2e57);
+          text-align: center;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 16px;
+          /* 133.333% */
+          width: 62px;
+          height: 62px;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          left: 50%;
+          top: -31px;
+          transform: translateX(-50%);
+          background: #fff;
+          border: 3px solid #ececf6; }
+          .sc-salesforce-inner .wrap-block-draw .block-draw .tag-number span {
+            color: #403ceb;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 36px;
+            position: relative;
+            top: -5px; }
+        .sc-salesforce-inner .wrap-block-draw .block-draw p.title {
+          color: var(--dark, #2f2e57);
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 26px;
+          /* 162.5% */
+          min-height: 78px; }
+        .sc-salesforce-inner .wrap-block-draw .block-draw img {
+          width: 250px; }
+    .sc-salesforce-inner .group-btn {
+      gap: 25.6px; }
+      .sc-salesforce-inner .group-btn a {
+        padding: 16px 48px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        /* 150% */ }
+        .sc-salesforce-inner .group-btn a::before {
+          top: 50%;
+          left: 22px;
+          transform: translateY(-50%);
+          width: 15px;
+          height: 19px; }
+        .sc-salesforce-inner .group-btn a:nth-child(2) {
+          background-color: #37bd21; }
+        .sc-salesforce-inner .group-btn a:nth-child(3) {
+          background-color: #4bc1db; }
 
 .sc-feedback {
   padding: 140px 0;
@@ -1412,9 +1456,18 @@ section.sc-help {
 
 .sc-video {
   position: relative;
-  padding: 140px 0;
+  padding: 102px 0;
   background: #403ceb;
   color: #fff; }
+  .sc-video .c-header {
+    margin-bottom: 24px; }
+    .sc-video .c-header h2 {
+      font-weight: 700; }
+  .sc-video h3 > a {
+    font-weight: 700; }
+  .sc-video .iconz-arrow2-right:before {
+    width: 13px;
+    height: 13px; }
   .sc-video .el-item:not(:last-child) {
     margin-bottom: 80px; }
   .sc-video .el-item:last-child .el-item__meta {
@@ -2437,7 +2490,7 @@ h1.entry-title {
   .sc-video.sc-iframe .el-item__title {
     font-size: 20px;
     line-height: 29px;
-    margin-bottom: 12px; }
+    margin-bottom: 6px; }
 
 .iframe-more {
   display: inline-block;
@@ -2661,11 +2714,6 @@ h1.entry-title {
     .sc-dd .el-item__title {
       font-size: 16px; }
 
-  .sc-salesforce {
-    padding: 140px 0 80px; }
-    .sc-salesforce .btn {
-      padding: 8px 24px; }
-
   .c-header.mb80 {
     margin-bottom: 60px; }
 
@@ -2818,10 +2866,6 @@ h1.entry-title {
   .sc-dd .el-item {
     margin: auto; }
 
-  .sc-salesforce .c-header__title {
-    font-size: 36px;
-    line-height: 56px; }
-
   .sc-feedback .slider-item__title {
     font-size: 26px;
     line-height: 32px; }
@@ -2946,12 +2990,6 @@ h1.entry-title {
 
   .page__content {
     padding: 48px 0; }
-
-  .sc-salesforce .c-header__title {
-    font-size: 30px;
-    line-height: 48px; }
-  .sc-salesforce .btn {
-    padding: 8px 32px; }
 
   .sc-feedback__slider {
     padding-bottom: 40px; }
